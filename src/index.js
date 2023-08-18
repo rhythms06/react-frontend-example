@@ -49,7 +49,7 @@ const router = createBrowserRouter([
         // ...the user visits [URL]/teas.
         path: "teas",
         element: <Teas />,
-        loader: async () => fetch(REACT_APP_JSON_SERVER_URL).then(response => response.json())
+        loader: async () => fetch(process.env.REACT_APP_JSON_SERVER_URL).then(response => response.json())
       },
       {
         // ...the user visits [URL]/about.
