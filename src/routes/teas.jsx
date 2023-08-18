@@ -12,7 +12,7 @@ export default function Teas() {
         // Prevent default behavior.
         event.preventDefault();
         // POST the newly submitted tea and update state.
-        fetch("http://localhost:3000/teas", {
+        fetch(REACT_APP_JSON_SERVER_URL, {
             method: "POST",
             headers: { "Content-Type": "application/json", "Accept": "application/json" },
             body: JSON.stringify({
